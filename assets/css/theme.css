@@ -46,11 +46,12 @@ body {
 
 .main-subtitle {
   padding-top: 20px;
-  padding-left: 20%;
-  padding-right: 20%;
   font-size: 17px;
 }
-
+.padding-weird {
+  padding-left: 20%;
+  padding-right: 20%;
+}
 .waitlist-button {
   margin-top: 20px;
   font-size: 15px;
@@ -65,8 +66,6 @@ body {
 
 .sub-subtitle {
   margin-bottom: 10px;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 
 .tabs-dual {
@@ -78,7 +77,7 @@ body {
 }
 
 @media (max-width: 900px) {
-  .main-subtitle, .sub-subtitle {
+  .padding-weird {
     padding-right: 10px;
     padding-left: 10px;
   }
