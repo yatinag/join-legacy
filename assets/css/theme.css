@@ -56,12 +56,17 @@ body {
   font-size: 15px;
 }
 .container {
-    padding: 25px;
+  padding: 25px;
+}
+
+.mt-20 {
+  margin-top: -20px;
 }
 
 .sub-subtitle {
-  margin-top: -20px;
   margin-bottom: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .tabs-dual {
@@ -72,6 +77,39 @@ body {
   padding-bottom: 3em;
 }
 
+@media (max-width: 900px) {
+  .main-subtitle, .sub-subtitle {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .main-title {
+    font-size: 30px;
+    width: 230px;
+  }
+  .main-subtitle, .sub-subtitle {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .waitlist-button, .special-button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 330px) {
+  .main-title {
+    font-size: 25px;
+    width: 200px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
 /*
 .silly a{
     text-decoration: none;
