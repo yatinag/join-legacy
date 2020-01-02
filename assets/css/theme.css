@@ -76,10 +76,26 @@ body {
   padding-bottom: 3em;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+.flex-container > img {  
+  width: 130px;
+  height: auto;
+  margin: auto;
+}
+
 @media (max-width: 900px) {
   .padding-weird {
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .flex-container > img {  
+    width: 100px;
   }
 }
 @media (max-width: 450px) {
@@ -107,6 +123,9 @@ body {
   }
   .title {
     font-size: 20px;
+  }  
+  .flex-container {  
+    height: 200px;
   }
 }
 /*
