@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8"/>
+    <title>Join Legacy | WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Legacy WebApp - Marketplace for students and mentors to set up income-sharing agreements. Alternative for student loans, and opportunity for investments in students.">
+    <meta name="keywords" content="legacy webapp, join legacy, legacy, student isa, uc berkeley, cal, college fund, income sharing student, student debt, student loan">
+    <meta name="author" content="Yatin Agarwal">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- MAIN STYLESHEETS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css" type="text/css" media="all"/>
+    <script type="text/javascript" src="assets/json/students.json"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+
+	<body> 
+<!--
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+		  <div class="navbar-brand">
+			<a class="navbar-item" href="https://bulma.io">
+			  <img src="assets/img/logo-vector.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="28" height="28">
+			</a>
+      <a class="navbar-item">
+        Home
+      </a>
+			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+			  <span aria-hidden="true"></span>
+			  <span aria-hidden="true"></span>
+			  <span aria-hidden="true"></span>
+			</a>
+		  </div>
+		</nav>
+-->
+    <section class="hero is-dark is-small">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item animated fadeInLeft">
+                <img src="assets/img/logo-vector.png" alt="Logo">
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item">
+                  <span class="icon is-small">
+                    <i class="fas fa-user-circle" aria-hidden="true"></i>
+                  </span>
+                </a>
+                <a class="navbar-item">
+                  <span class="icon is-small">
+                    <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <div id="app">
+        <div class="columns is-gapless">
+          <div class="column is-3">
+            <aside class="menu">
+              <ul class="menu-list">
+                <div class="menu-list__profile media">
+                  <div class="media-left">
+                    <figure class="image">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/profile/profile-512.jpg?100000">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-5 font-color-white">Larry Ellison</p>
+                    <p class="subtitle is-7 has is-uppercase font-color-white has-text-weight-bold">Investor</p>
+                  </div>
+                </div>
+                <div class="menu-list__main is-uppercase has-text-left">
+                  <li><a class="subtitle is-7"><i class="dashboard-icon fas fa-cubes"></i>Dashboard</a></li>
+                  <li><a class="subtitle is-7"><i class="dashboard-icon fas fa-user"></i>Funded Students</a></li>
+                  <li><a class="subtitle is-7 active"><i class="dashboard-icon fa fa-search"></i>Find Students</a></li>
+                  <li><a class="subtitle is-7"><i class="dashboard-icon far fa-chart-bar"></i>Understand My Legacy</a></li>
+                  <li class="menu-list__outlier"><a class="subtitle is-7"><i class="dashboard-icon fas fa-cog"></i>Settings</a></li>
+                </div>
+              </ul>
+            </aside>
+          </div>
+          <div class="column">
+            <div class="dashboard">
+              <div class="dashboard__content">
+                <div class="header">
+                  <div>
+                    <p class="title is-5 is-pulled-left font-color-dark">Find Students 
+                      <span class="subtitle is-6 is-block font-color-light" style="padding-top: 1.0rem">1020 Total Students</span></p>
+                    <p class="title is-6 is-pulled-right font-color-medium">146 Looking for Funding
+                      <span class="subtitle is-6 is-block font-color-primary is-uppercase" style="font-size: 0.9rem; padding-top: 1.0rem">View more</span></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="columns">
+                    <div class="column one-third" v-for="user in firstThreeUsers">
+                      <user-card :user="user"></user-card>
+                    </div>
+                  </div>
+                </div>
+                <div class="row bottom-row">
+                  <div class="columns">
+                    <div class="column one-third" v-for="user in lastThreeUsers">
+                      <user-card :user="user"></user-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+    const UserCard = {
+      template: 
+        `<div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img :src="user.image">
+                </figure>
+              </div>
+            </div>
+            <div class="media-content">
+              <p class="title is-6 is-uppercase font-color-primary has-text-weight-bold">{{user.name}}</p>
+              <p class="subtitle is-7 font-color-light has-text-weight-bold">{{user.university}} - {{user.year}} - {{user.major}}</p>
+              <p class="content has-text-weight-bold font-color-medium">Current Aspirations: {{user.description}}<br></p>
+            </div>
+          </div>
+        </div>`,
+      props: ['user']
+    }
+
+    new Vue({
+      el: '#app',
+      computed: {
+        firstThreeUsers() {
+          return students.splice(0 , 3);
+        },
+        lastThreeUsers() {
+          return students.splice(-3)
+        }
+      },
+      data: {
+        students
+      },
+      components: {
+        'user-card': UserCard
+      }
+    })
+    </script>
+	</body>
+</html>

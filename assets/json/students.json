@@ -1,0 +1,50 @@
+const students = [
+    {
+      name: 'Grace Santa',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg',
+      university: 'UC Berkeley',
+      year: 'Sophomore',
+      major: 'Computer Science',
+      description: 'Software Engineer at Fortune 500',
+    },
+    {
+      name: 'Jerry Graham',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg',
+      university: 'Stanford University',
+      year: 'Sophomore',
+      major: 'Business Administration',
+      description: "Analyst at a top VC Firm"
+    },
+    {
+      name: 'Mitt Anders',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg',
+      university: 'SFSU',
+      year: 'Freshman',
+      major: 'Mechanical Engineering',
+      description: 'Mechanical Engineer in Silicon Valley'
+    },
+    {
+      name: 'Teresa Brooks',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample8.jpg',
+      university: 'Stanford University',
+      year: 'Junior',
+      major: 'Electrical Engineer',
+      description: 'Systems Engineer in the Bay Area'
+    },
+    {
+      name: 'Maude Jordan',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg',
+      university: 'UC Berkeley',
+      year: 'Freshman',
+      major: 'EECS',
+      description: 'FullStack Developer at Fortune 500',
+    },
+    {
+      name: 'Eleanor Lucas',
+      image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample9.jpg',
+      university: 'UCSF',
+      year: 'Freshman',
+      major: 'Pre-doctoral',
+      description: "Dentist with self-owned clinic"
+    }
+]
